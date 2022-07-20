@@ -15,7 +15,7 @@ gem "puma", "~> 5.0"
 # 3rd party
 gem 'bcrypt', "~> 3.1.18"
 gem 'jwt'
-
+gem 'rubocop-rails', require: false
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
