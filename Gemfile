@@ -18,6 +18,7 @@ gem 'puma', '~> 5.0'
 gem 'bcrypt', '~> 3.1.18'
 gem 'jwt'
 gem 'rubocop-rails', require: false
+gem 'simple_command'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
