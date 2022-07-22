@@ -14,7 +14,9 @@ class TicketsController < ApplicationController
 
   def create
     ticket = current_user.tickets.create!(ticket_params)
-    render json: ticket, status: 201
+    render json: {ticket, comments: ticket.comments}, status: 201
+    end
+
   end
 
   def update
