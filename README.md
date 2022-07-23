@@ -10,11 +10,11 @@
 If you already fulfill the requirements move the the installation section.
 
 ## Install Ruby
-Install ```ruby '3.0.0'``` using rvm follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-20-04) to install rvm on ubuntu.
+Install ```ruby '3.0.0'``` using rvm follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-20-04) to install rvm on ubuntu. <br />
 Then run ``` rvm install 3.0.0```
 
 ## Install Bundler
-Bundler helps us manage and install gems. Learn more about it [here](https://github.com/rubygems/bundler).
+Bundler helps us manage and install gems. Learn more about it [here](https://github.com/rubygems/bundler).<br />
 Run ``` gem install bundler ``` to install.
 
 ## Install Rails
@@ -29,8 +29,8 @@ Clone the repository
 ``` git clone https://github.com/AdetunjiTejumade/customer_support_system```
 
 ## Install Ruby dependencies
-```cd customer_support_ticketing_system/```
-run ```bundle install``` to install the required dependencies
+```cd customer_support_system/``` <br />
+Run ```bundle install``` to install the required dependencies
 
 ## Setup the database
 
