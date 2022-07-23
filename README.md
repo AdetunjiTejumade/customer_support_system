@@ -51,18 +51,18 @@ Site should now be live at [localhost:3000](http://localhost:3000)
 
 ### Authentication
 Signup
-```POST /signup```
+```POST /signup``` <br />
 Login
 ```POST /login ```
 
 ### Tickets(requests)
-``` POST /tickets ``` create new ticket
-``` GET /tickets ``` Get all tickets for a user
-``` PUT /tickets/:ticket_id]``` Update a ticket
-``` GET /tickets/:ticket_id]``` Get a ticket
-``` DELETE /tickets/:ticket_id]``` Delete a ticket
-``` POST /:ticket_id/comments ``` Add comment to a ticket
-``` GET /agent/tickets``` Get tickets assigned to an agent
+``` POST /tickets ``` create new ticket <br />
+``` GET /tickets ``` Get all tickets for a user <br />
+``` PUT /tickets/:ticket_id]``` Update a ticket <br />
+``` GET /tickets/:ticket_id]``` Get a ticket <br />
+``` DELETE /tickets/:ticket_id]``` Delete a ticket <br />
+``` POST /:ticket_id/comments ``` Add comment to a ticket <br />
+``` GET /agent/tickets``` Get tickets assigned to an agent <br />
 ``` PUT /agent/tickets/:ticket_id] ``` Update a ticket status (agent)
 
 ## Assumptions
