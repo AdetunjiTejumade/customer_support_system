@@ -1,24 +1,20 @@
-# README
+# Customer support system Api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
 
-Things you may want to cover:
+- Rails 7.0.3
+- ruby '3.0.0'
+- Postgres
 
-* Ruby version
+## Installtion
 
-* System dependencies
+## Clone the repository
 
-* Configuration
+## Install Ruby dependencies
+run ```bundle install``` to install the required dependencies
 
-* Database creation
+## Setup the database
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```rails db:create
+rails db:migrate
+rails db:seed```
