@@ -7,21 +7,23 @@ RSpec.describe 'Users', type: :request do
   let(:user) { build(:user) }
   let(:headers) { valid_headers.except('Authorization') }
   let(:valid_attributes) do
-    attributes_for(:user, password_confirmation: user.password)
+    attributes_for(:user, password: user.password, password_confirmation: user.password)
   end
   describe 'POST /signup' do
     context 'when valid request' do
-      before { post '/signup', params: valid_attributes.json, headers: headers }
+      before do
+        post '/signup', params: valid_attributes.to_json, headers: headers
+      end
 
-      xit 'creates a new user and returns status code 201' do
+      it 'creates a new user and returns status code 201' do
         expect(response).to have_http_status(201)
       end
 
-      xit 'returns success message' do
-        expect(json['message']).to match(/Account created successfully/)
+      it 'returns success message' do
+        expect(json['message']).to match(/Welcome #{valid_attributes[:name]}, account created successfully/)
       end
 
-      xit 'returns an authentication token in the header' do
+      it 'returns an authentication token in the header' do
         expect(json['token']).not_to be_nil
       end
     end

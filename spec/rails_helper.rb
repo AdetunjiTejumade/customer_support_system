@@ -5,20 +5,13 @@ require 'spec_helper'
 require 'simplecov'
 require 'database_cleaner/active_record'
 
-SimpleCov.start do
-  add_filter '/test/'
-  add_filter '/config/'
-  add_filter '/vendor/'
-
-  add_group 'Controllers', 'app/controllers'
-  add_group 'Models', 'app/models'
-  add_group 'Helpers', 'app/helpers'
-  add_group 'Mailers', 'app/mailers'
+SimpleCov.start 'rails' do
+  add_filter '/app/mailers'
+  add_filter '/app/jobs'
+  add_filter '/app/channels'
 end
-# OPTIONAL
-# This outputs the report to your public folder
-# You will want to add this to .gitignore
-SimpleCov.coverage_dir 'public/coverage'
+
+SimpleCov.maximum_coverage_drop 5
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'

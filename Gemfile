@@ -51,11 +51,12 @@ group :development, :test do
 end
 
 group :test do
-  gem 'simplecov', require: false
   gem 'database_cleaner-active_record'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'simplecov', require: false
+  gem 'simplecov-rcov'
 end
 
 group :development do

@@ -18,7 +18,7 @@ RSpec.describe AuthorizeApiRequest do
 
     context 'when invalid request' do
       context 'when missing token' do
-        it 'raises a MissingToken error' do
+        it 'returns a Missing Token error' do
           result = invalid_request_obj.call
           expect(result.errors[:token]).to eq(['Missing token', 'Invalid token'])
         end
