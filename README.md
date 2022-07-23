@@ -38,7 +38,9 @@ run ```bundle install``` to install the required dependencies
 rails db:migrate
 rails db:seed
 ```
-
+## Run test
+Run ``` rspec ``` <br />
+The project has a 98.06% test coverage
 
 ## Start app
 
