@@ -1,5 +1,5 @@
 # Customer support system Api
-
+[![Coverage Status](https://coveralls.io/repos/github/AdetunjiTejumade/customer_support_system/badge.svg?branch=main)](https://coveralls.io/github/AdetunjiTejumade/customer_support_system?branch=main)
 ## Requirements
 
 - Ruby '3.0.0'
