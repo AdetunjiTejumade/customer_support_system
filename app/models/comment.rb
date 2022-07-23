@@ -10,7 +10,7 @@ class Comment < ApplicationRecord
     Comment.all.where(ticket_id: ticket_id).order(:created_at)
   end
 
-  def self.is_first_commenter_agent?(ticket_id)
+  def self.first_commenter_agent?(ticket_id)
     first_comment = get_comments_for_ticket(ticket_id).first
     first_comment&.user ? first_comment.user.role == 'agent' : false
   end

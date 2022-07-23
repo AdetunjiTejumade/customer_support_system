@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     ticket = Ticket.find(params[:ticket_id])
 
     if (current_user.role != 'agent') &&
-       !Comment.is_first_commenter_agent?(params[:ticket_id])
+       !Comment.first_commenter_agent?(params[:ticket_id])
       return render json: { message: 'Please wait for an agent to comment' }
     end
 
