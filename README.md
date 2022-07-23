@@ -70,9 +70,9 @@ Login
 ## Assumptions
 - There's an admin that creates Agent accounts (The sign up api only creates customer accounts).
 
-## Limitations
-
 ## Issues 
-- Automaticallly assigning tickets to agents. Currently this is done randomly. Can be improved to follow the round-robin technique 
+- Automaticallly assigning tickets to agents. Currently this is done randomly. Can be improved to follow the round-robin technique.
 
 ## Feedback
+Instructions were pretty clear
+
