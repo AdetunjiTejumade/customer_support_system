@@ -7,7 +7,7 @@
 - Rails 7.0.3
 - Postgres
 
-If you already fufill the requirements move the the installation section.
+If you already fulfill the requirements move the the installation section.
 
 ## Install Ruby
 Install ```ruby '3.0.0'``` using rvm follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-20-04) to install rvm on ubuntu.
@@ -23,7 +23,7 @@ Run ``` gem install rails 7.0.3```
 ## Postgresql
 Follow [this](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart) tutorial to install postgresql on ubuntu.
 
-## Installtion
+## Installation
 
 Clone the repository
 ``` git clone https://github.com/AdetunjiTejumade/customer_support_system```
@@ -71,7 +71,7 @@ Login
 - There's an admin that creates Agent accounts (The sign up api only creates customer accounts).
 
 ## Issues 
-- Automaticallly assigning tickets to agents. Currently this is done randomly. Can be improved to follow the round-robin technique.
+- Automatically assigning tickets to agents. Currently this is done randomly. Can be improved to follow the round-robin technique.
 
 ## Feedback
 Instructions were pretty clear
