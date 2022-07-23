@@ -5,10 +5,8 @@ class Ticket < ApplicationRecord
   has_many :comments, dependent: :destroy
   REQUEST_STATUSES = {
     open: 'open',
-    solved: 'solved',
-    pending: 'pending',
-    in_progress: 'in_progress',
-    assigned: 'assigned'
+    complete: 'complete',
+    pending: 'pending'
   }.freeze
 
   enum status: REQUEST_STATUSES

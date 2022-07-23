@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :password_digest, presence: true, length: { minimum: 6 }
 
   def agent?
-    name == 'agent'
+    role == 'agent'
   end
 
   def customer?

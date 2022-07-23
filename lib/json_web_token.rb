@@ -12,8 +12,8 @@ class JsonWebToken
     def decode(token)
       body = JWT.decode(token, SECRET_KEY)[0]
       HashWithIndifferentAccess.new body
-    rescue JWT::DecodeError => e
-      raise ExceptionHandler::InvalidToken, e.message
+    rescue StandardError
+      nil
     end
   end
 end

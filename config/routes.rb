@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :tickets, only: %i[index create show update destroy] do
     resources :comments, only: %i[create]
   end
+
+  namespace :agent do
+    resources :tickets, only: %i[index update]
+  end
 end

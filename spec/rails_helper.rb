@@ -2,7 +2,23 @@
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'simplecov'
 require 'database_cleaner/active_record'
+
+SimpleCov.start do
+  add_filter '/test/'
+  add_filter '/config/'
+  add_filter '/vendor/'
+
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Models', 'app/models'
+  add_group 'Helpers', 'app/helpers'
+  add_group 'Mailers', 'app/mailers'
+end
+# OPTIONAL
+# This outputs the report to your public folder
+# You will want to add this to .gitignore
+SimpleCov.coverage_dir 'public/coverage'
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'

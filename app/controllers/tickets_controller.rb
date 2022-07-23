@@ -8,31 +8,39 @@ class TicketsController < ApplicationController
   end
 
   def show
-    ticket = Ticket.find(params[id])
+    ticket = Ticket.includes(:comments).find(params[:id])
     render json: ticket
   end
 
   def create
-    ticket = current_user.tickets.create!(ticket_params)
-    render json: {ticket, comments: ticket.comments}, status: 201
+    agent_id = User.where(role: 'agent').pluck(:id).sample
+    agent = User.find_by(id: agent_id).name
+    ticket = current_user.tickets.new(ticket_params)
+    ticket.assigned_to = agent
+    if ticket.save
+      render json: ticket, status: :created
+    else
+      render json: { message: "Validation failed: Title can't be blank Description can't be blank" },
+             status: :unprocessable_entity
     end
-
   end
 
   def update
+    ticket = Ticket.find(params[:id])
     ticket.update(ticket_params)
-    render json: ticket, status: 201
+    render json: ticket
   end
 
   def destroy
+    ticket = Ticket.find(params[:id])
     ticket.destroy
-    json_response(ticket)
+    render json: ticket
   end
 
   private
 
   def ticket_params
-    params.permit(:title, :description, :status)
+    params.require(:ticket).permit(:title, :description)
   end
 
   def set_ticket
